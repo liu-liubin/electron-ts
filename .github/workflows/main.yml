@@ -14,10 +14,13 @@ jobs:
   steps:
     - name: Checkout  # 将代码拉到虚拟机
       uses: actions/checkout@v3.0.0
+
     - name: Install Node
       uses: actions/setup-node@v2
+
     - name: Install dependencies
       run: npm install
+      
     - name: Publish Electron App
       run: npm run publish
       env:
