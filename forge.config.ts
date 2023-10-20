@@ -15,6 +15,19 @@ const config: ForgeConfig = {
   },
   rebuildConfig: {},
   makers: [new MakerSquirrel({}), new MakerZIP({}, ['darwin']), new MakerRpm({}), new MakerDeb({})],
+  publishers: [
+    {
+      name: '@electron-forge/publisher-github',
+      config:{
+        authToken: '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',
+        repository: {
+          owner: 'liu-liubin',
+          name: 'electron-ts'
+        },
+        prerelease: true
+      }
+    }
+  ],
   plugins: [
     new AutoUnpackNativesPlugin({}),
     new WebpackPlugin({

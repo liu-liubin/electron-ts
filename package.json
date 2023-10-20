@@ -30,6 +30,8 @@
     "@vercel/webpack-asset-relocator-loader": "^1.7.3",
     "css-loader": "^6.8.1",
     "electron": "27.0.1",
+    "electron-log": "^4.4.8",
+    "electron-store": "^8.1.0",
     "eslint": "^8.51.0",
     "eslint-plugin-import": "^2.28.1",
     "fork-ts-checker-webpack-plugin": "^7.3.0",
