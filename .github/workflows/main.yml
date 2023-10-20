@@ -16,7 +16,7 @@ jobs:
   #       uses: actions/setup-node@v3.0.0
 
   #     - name: Install dependencies
-  #       run: npm install
+  #       run: npm install 
 
   #     - name: Publish Electron App
   #       run: npm run publish
