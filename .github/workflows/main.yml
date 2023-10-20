@@ -4,7 +4,7 @@ on: # 监听 main 分支上的 push 事件
     branches:
       - main
 env:
-  GITHUB_TOKEN: [ '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' ]
+  GITHUB_TOKEN: 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
 jobs:
   # build_on_mac: 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
   #   runs-on: macos-latest
