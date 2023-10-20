@@ -69,7 +69,7 @@ const createIpcChannel = ()=>{
     WindowManager.getAllWindow().forEach(win=>win.close());
 
     WindowManager.create(WindowModule.Login);
-    WindowManager.getWindow(WindowModule.Login)?.view('http://localhost:3004');
+    WindowManager.getWindow(WindowModule.Login)?.view('http://192.168.0.101:3004');
   })
 
   // 获取渲染视图数
@@ -87,12 +87,10 @@ const createIpcChannel = ()=>{
 
 }
 
-// This method will be called when Electron has finished
-// initialization and is ready to create browser windows.
-// Some APIs can only be used after this event occurs.
 app.on('ready', ()=>{
-  // createIpcChannel();
-  // startBrowserWindow();
+  Logger.info('[APP] on:ready', 'App已准备就绪');
+  createIpcChannel();
+  startBrowserWindow();
 });
 
 // Quit when all windows are closed, except on macOS. There, it's common
@@ -116,7 +114,3 @@ app.on('quit', ()=>{
   // BrowserWindow.getAllWindows().forEach(w=> w.destroy());
   Logger.info('[APP] on quit', '收到应用程序退出的事件');
 })
-
-
-// In this file you can include the rest of your app's specific main process
-// code. You can also put them in separate files and import them here.

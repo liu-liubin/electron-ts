@@ -39,12 +39,26 @@ const config: ForgeConfig = {
         config: rendererConfig,
         entryPoints: [
           {
-            html: './src/index.html',
-            js: './src/renderer.ts',
             name: 'main_window',
             preload: {
-              js: './src/preload.ts',
-            },
+              'js': './src/preload.ts'
+            }
+          },
+          {
+            html: './src/views/error/crash/index.html',
+            js: './src/views/error/crash/index.ts',
+            name: 'html_error_crash',
+            // preload: {
+            //   js: './src/views/login/preload.ts',
+            // },
+          },
+          {
+            html: './src/views/loading/index.html',
+            js: './src/views/loading/index.ts',
+            name: 'html_loading',
+            // preload: {
+            //   js: './src/views/login/preload.ts',
+            // },
           },
         ],
       },
