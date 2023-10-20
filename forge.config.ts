@@ -12,6 +12,9 @@ import { rendererConfig } from './webpack.renderer.config';
 const config: ForgeConfig = {
   packagerConfig: {
     asar: true,
+    osxSign: {
+      identity: 'Liu Song (7PZMT8T5KL)'
+    }
   },
   rebuildConfig: {},
   makers: [new MakerSquirrel({}), new MakerZIP({}), new MakerRpm({}), new MakerDeb({})],
@@ -19,7 +22,7 @@ const config: ForgeConfig = {
     {
       name: '@electron-forge/publisher-github',
       config:{
-        authToken: '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',
+        authToken: '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',
         repository: {
           owner: 'liu-liubin',
           name: 'electron-ts'
