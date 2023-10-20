@@ -1,0 +1,19 @@
+name: Build and Deploy
+on: # 监听 main 分支上的 push 事件
+  push:
+    branches:
+      - main
+jobs:
+  build-and-deploy:
+    runs-on: macos-latest  # 构建环境使用 ubuntu
+    steps:
+      - name: Checkout  # 将代码拉到虚拟机
+        uses: actions/checkout@v1.0.0
+      - name: NodeJs
+        uses: actions/setup-node@v2
+      - name: Install and Make
+        env:
+            GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        run: |
+          npm install
+          npm run make
