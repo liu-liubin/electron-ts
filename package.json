@@ -1,6 +1,6 @@
 {
-  "name": "my-app002",
-  "productName": "my-app002",
+  "name": "rp-desktop",
+  "productName": "rp-desktop",
   "version": "1.0.0",
   "description": "My Electron application description",
   "main": ".webpack/main",
