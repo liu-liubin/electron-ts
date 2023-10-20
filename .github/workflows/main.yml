@@ -4,7 +4,7 @@ on: # 监听 main 分支上的 push 事件
     branches:
       - main
 env:
-  GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+  GITHUB_TOKEN: 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
 jobs:
   build_on_mac:
     runs-on: macos-latest
@@ -20,8 +20,6 @@ jobs:
 
       - name: Publish Electron App
         run: npm run publish
-        env:
-          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
   build_on_window:
     runs-on: windows-latest
     steps:

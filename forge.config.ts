@@ -22,7 +22,7 @@ const config: ForgeConfig = {
     {
       name: '@electron-forge/publisher-github',
       config:{
-        // authToken: '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',
+        // authToken: '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',
         repository: {
           owner: 'liu-liubin',
           name: 'electron-ts'
