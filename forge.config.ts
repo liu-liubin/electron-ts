@@ -14,12 +14,12 @@ const config: ForgeConfig = {
     asar: true,
   },
   rebuildConfig: {},
-  makers: [new MakerSquirrel({}), new MakerZIP({}, ['darwin']), new MakerRpm({}), new MakerDeb({})],
+  makers: [new MakerSquirrel({}), new MakerZIP({}), new MakerRpm({}), new MakerDeb({})],
   publishers: [
     {
       name: '@electron-forge/publisher-github',
       config:{
-        authToken: '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',
+        authToken: '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',
         repository: {
           owner: 'liu-liubin',
           name: 'electron-ts'
